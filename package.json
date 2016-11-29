@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
+    "test": "mocha ./test",
     "start": "node server.js",
     "precommit": "npm run lint"
   },
@@ -19,10 +20,12 @@
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
+    "env-test": "^1.0.0",
     "eslint": "^3.2.2",
     "eslint-config-airbnb": "^10.0.0",
     "eslint-plugin-import": "^1.12.0",
     "eslint-plugin-mocha": "^4.7.0",
+    "expect.js": "^0.3.1",
     "husky": "^0.11.9",
     "mocha": "^3.2.0"
   }

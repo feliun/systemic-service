@@ -9,7 +9,7 @@ export default () => {
     cb(null, logger);
   };
 
-  const stop = () => {};
+  const stop = (cb) => { cb(); };
 
   return { start, stop };
 };

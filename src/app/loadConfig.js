@@ -11,7 +11,7 @@ export default () => {
     .end(cb);
   };
 
-  const stop = () => {};
+  const stop = (cb) => { cb(); };
 
   return { start, stop };
 };

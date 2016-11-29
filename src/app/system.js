@@ -16,3 +16,5 @@ export const init = () => {
     logger.info(`Service has started: ${JSON.stringify(Object.keys(components))}`);
   });
 };
+
+// TODO add cluster
