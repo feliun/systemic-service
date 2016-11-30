@@ -7,6 +7,7 @@
     "lint": "eslint .",
     "test": "mocha ./test",
     "start": "node server.js",
+    "dev": "docker-compose up -d && sleep 5 && npm run start",
     "precommit": "npm run lint"
   },
   "dependencies": {
