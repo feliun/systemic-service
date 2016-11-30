@@ -1,11 +1,19 @@
 import Systemic from 'systemic';
 import runner from 'systemic-service-runner';
+import express from 'systemic-express';
 import loadConfig from './loadConfig';
 import loadLogger from './loadLogger';
+import routes from './routes';
+
+const { server, app, defaultMiddleware } = express;
 
 const system = new Systemic()
-        .add('config', loadConfig())
-        .add('logger', loadLogger());
+                .add('config', loadConfig(), { scoped: true })
+                .add('logger', loadLogger())
+                .add('app', app()).dependsOn('config')
+                .add('routes', routes()).dependsOn('app', 'logger')
+                .add('middleware.default', defaultMiddleware()).dependsOn('routes', 'app')
+                .add('server', server()).dependsOn('config', 'app', 'middleware.default');
 
 export default system;
 
@@ -16,5 +24,3 @@ export const init = () => {
     logger.info(`Service has started: ${JSON.stringify(Object.keys(components))}`);
   });
 };
-
-// TODO add cluster

@@ -18,7 +18,7 @@ describe('Example test', () => {
   });
 
   it('should initialise all components', () => {
-    const expectedComponents = ['config', 'logger'];
+    const expectedComponents = ['config', 'logger', 'app', 'middleware', 'server'];
     const comparison = _.differenceWith(expectedComponents, components, _.isEqual);
     expect(comparison).to.eql([]);
   });

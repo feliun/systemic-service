@@ -14,8 +14,10 @@
     "babel-register": "^6.11.6",
     "confabulous": "^1.0.0",
     "lodash": "^4.17.2",
+    "on-headers": "^1.0.1",
     "prepper": "^0.2.0",
     "systemic": "^0.6.0",
+    "systemic-express": "^1.1.0",
     "systemic-service-runner": "^0.1.2"
   },
   "devDependencies": {
