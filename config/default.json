@@ -9,5 +9,11 @@
   },
   "logger": {
     "transport": "bunyan"
+  },
+  "postgres": {
+    "user": "postgres",
+    "host": "localhost",
+    "database": "mydatabase",
+    "schema": "public"
   }
 }

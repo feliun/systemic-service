@@ -23,6 +23,7 @@
     "require-all": "^2.0.0",
     "systemic": "^0.6.0",
     "systemic-express": "^1.1.0",
+    "systemic-pg": "^1.2.0",
     "systemic-service-runner": "^0.1.2"
   },
   "devDependencies": {
