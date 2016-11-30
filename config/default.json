@@ -6,5 +6,8 @@
   },
   "app": {
     "etag": true
+  },
+  "logger": {
+    "transport": "bunyan"
   }
 }
