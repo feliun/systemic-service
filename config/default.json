@@ -13,7 +13,7 @@
   "postgres": {
     "user": "postgres",
     "host": "localhost",
-    "database": "mydatabase",
+    "database": "postgres",
     "schema": "public"
   }
 }
