@@ -1,14 +1,14 @@
 import Systemic from 'systemic';
 import runner from 'systemic-service-runner';
 import express from 'systemic-express';
-import loadConfig from './loadConfig';
 import loadLogger from './loadLogger';
 import routes from './routes';
+import infra from '../infra';
 
 const { server, app, defaultMiddleware } = express;
 
 const system = new Systemic()
-                .add('config', loadConfig(), { scoped: true })
+                .add('config', infra.confabulous(), { scoped: true })
                 .add('logger', loadLogger())
                 .add('app', app()).dependsOn('config')
                 .add('routes', routes()).dependsOn('app', 'logger')
