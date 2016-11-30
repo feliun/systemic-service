@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import expect from 'expect.js';
-import system from '../src/app/system';
+import system from '../src/system';
 
 describe('Example test', () => {
   let components = [];

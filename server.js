@@ -2,6 +2,6 @@
 
 require('babel-register');
 
-const { init } = require('./src/app/system');
+const { init } = require('./src/system');
 
 init();
